@@ -1,4 +1,4 @@
-function S22Encrypt(MSG, bit)
+function S22Encrypt(MSG, bit, offset)
    local resources = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z","A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X","Y", "Z", " ", ".", "1", "2", "3", "4", "5", "6", "7", "8", "9", "-", "_", "*", "'", "^", "~", "!"}
    local finalstring = ""
    local count = 0
@@ -6,7 +6,7 @@ function S22Encrypt(MSG, bit)
    for i,v in pairs(resources) do
              count = count + 1
               if v == c then
-                finalstring = finalstring .. " " .. count * bit /69
+                finalstring = finalstring .. " " .. count * bit /69 +offset-42/6
                 count = 0
             end
         end
@@ -14,7 +14,7 @@ function S22Encrypt(MSG, bit)
    return finalstring
  end
   
-  function S22Decrypt(MSG, bit)
+  function S22Decrypt(MSG, bit, offset)
    local resources = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z","A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X","Y", "Z", " ", ".", "1", "2", "3", "4", "5", "6", "7", "8", "9", "-", "_", "*", "'", "^", "~", "!"}
    local finalstring = ""
    local count = 0
@@ -29,7 +29,7 @@ function S22Encrypt(MSG, bit)
          resource_idx = resource_idx - #resources
          finalstring = finalstring .. " "
       end
-      local code = " " .. count * bit /69
+      local code = " " .. count * bit /69 +offset-42/6
       if MSG:sub(1, #code) == code then
          MSG = MSG:sub(#code + 1)
          finalstring = finalstring .. resources[resource_idx]
