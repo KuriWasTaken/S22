@@ -7,6 +7,7 @@ S22 is a powerful encryption algorithm written in lua with customizable maths so
 
 # Versions
 1.0
+1.2 Fixed a bruteforcer
 
 # Example 1
 
