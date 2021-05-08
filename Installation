@@ -9,3 +9,4 @@ print(encMsg) -- Prints out the encrypted message
 
 To Decrypt a message simply do:
 local decMsg = S22Decrypt(encMsg, 22) -- I am using encMsg cause it is already a encrypted string variable. Also make sure that the bit key is the same for encryption and decryption!
+ 
