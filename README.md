@@ -1,4 +1,4 @@
-#S22
+# S22
 <p align="center">
   <img src="https://i.imgur.com/gPW6ZsJ.png" width="300" title="hover text">
 </p>
