@@ -8,7 +8,7 @@ S22 is a powerful encryption algorithm written in lua with customizable maths so
 # Versions
 1.0
 
-Examples
+# Examples
 BIT Number: 22 
 Message: "Hello World!"
 response: 15.623188405797 16.260869565217 14.028985507246 14.985507246377 17.855072463768 24.231884057971 14.985507246377 12.115942028986 11.478260869565 26.782608695652
