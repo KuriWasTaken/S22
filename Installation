@@ -4,9 +4,9 @@ In your main script where you want to use S22: go to the very top and add this s
 
 And now to using S22 it is really simple.
 To Encrypt a message simply do:
-local encMsg = S22Encrypt("Hello World!", 22) -- 22 is your bit key which you can change to be unique!
+local encMsg = S22Encrypt("Hello World!", 22, 99) -- 22 is your bit key which you can change to be unique! 99 is a offset to prevent brute forcing. Do not use the same bit as offset!
 print(encMsg) -- Prints out the encrypted message
 
 To Decrypt a message simply do:
-local decMsg = S22Decrypt(encMsg, 22) -- I am using encMsg cause it is already a encrypted string variable. Also make sure that the bit key is the same for encryption and decryption!
+local decMsg = S22Decrypt(encMsg, 22, 99) -- I am using encMsg cause it is already a encrypted string variable. Also make sure that the bit key is the same for encryption and decryption!  99 is a offset to prevent brute forcing. Do not use the same bit as offset!
  
