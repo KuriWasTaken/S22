@@ -23,3 +23,4 @@ BIT Number: 69
 Message: "Hello World!"
 
 response: 49.0 51.0 44.0 47.0 56.0 76.0 47.0 38.0 36.0 84.0
+ 
