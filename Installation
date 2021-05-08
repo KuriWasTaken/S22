@@ -1,0 +1,11 @@
+To implement S22 Encryption/Decryption simply place the S22Modules script in to your LUA project, preferably in a separate module file!
+
+In your main script where you want to use S22: go to the very top and add this simple line of code: require "codelibrary.S22Module" --Codelibraryy is the name of my modules folder.
+
+And now to using S22 it is really simple.
+To Encrypt a message simply do:
+local encMsg = S22Encrypt("Hello World!", 22) -- 22 is your bit key which you can change to be unique!
+print(encMsg) -- Prints out the encrypted message
+
+To Decrypt a message simply do:
+local decMsg = S22Decrypt(encMsg, 22) -- I am using encMsg cause it is already a encrypted string variable. Also make sure that the bit key is the same for encryption and decryption!
